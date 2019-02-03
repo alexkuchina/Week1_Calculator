@@ -41,8 +41,15 @@ void division(){
   cin >> num1;
   cout << "Enter second number: ";
   cin >> num2;
-  result = num1 / num2;
-  cout << "Result is: " << result << endl;
+  while (num2 == 0) {
+    cout << "Can't divide by 0" << endl;
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter second number: ";
+    cin >> num2;
+    result = num1 / num2;
+    cout << "Result is: " << result << endl;
+  }
 }
 
 void power(){
@@ -103,8 +110,7 @@ void factorial() {
   cout << "Factorial of " << num1 << " is " << result<< endl;
 }
 
-int main() {
-
+void showMenu() {
   cout << "1.Addition" << endl;
   cout << "2.Subtraction" << endl;
   cout << "3.Multiplication" << endl;
@@ -115,6 +121,11 @@ int main() {
   cout << "8.Floor" << endl;
   cout << "9.Ceiling" << endl;
   cout << "10.Factorial" << endl << endl;
+}
+
+int main() {
+
+  showMenu();
   cout << "Enter your choice. Pick(1/10): ";
   cin >> choice; 
   
