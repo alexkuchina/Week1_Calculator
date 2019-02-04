@@ -120,7 +120,13 @@ void showMenu() {
   cout << "7.ABS" << endl;
   cout << "8.Floor" << endl;
   cout << "9.Ceiling" << endl;
-  cout << "10.Factorial" << endl << endl;
+  cout << "10.Factorial" << endl;
+  cout << "11.Exit" << endl;
+}
+
+void exitCalc() {
+  cout << "Exit" << endl;
+  exit(0);
 }
 
 int main() {
@@ -159,6 +165,9 @@ int main() {
       break;
     case 10:
       factorial();
+      break;
+    case 11:
+      exitCalc();
       break;
     default:
       cout << "Enter valid input" << endl;
